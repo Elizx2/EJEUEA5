@@ -1,5 +1,5 @@
 body{background-color: rgb(241, 185, 120);
-    height: 500vh;
+    height: 2000px;
 }
 
 .T{text-align: center;}
@@ -8,12 +8,22 @@ body{background-color: rgb(241, 185, 120);
 
 
 img{
-    view-timeline-name: --image;
-    view-timeline-axis: block;
+  animation: fadeIn 3s ease;
 
-    animation-timeline: --image;
-    animation-name: show;
 }
+
+@keyframes fadeIn{
+  0% { 
+    opacity: 0;
+    filter: blur(20px) ;
+  }
+10%{
+  opacity:1 ;
+  filter: brightness(2) blur(10px);
+}
+}
+
+
 
 .img1 {
     top: 450px; 
@@ -27,29 +37,21 @@ img{
     height: auto;
     margin-bottom: 50px;
     position: relative;
-    clear: both; /* Evita que las imágenes se solapen */
+    clear: both; 
 }
 
-/* Imágenes impares a la izquierda */
-.img:nth-child(even) {
-    float: left;
-    margin-left: 10px;
-}
 
-/* Imágenes pares a la derecha */
 .img:nth-child(odd) {
-    float: right;
-    margin-right: 10px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 300px;
 }
-@keyframes show{
-    from{
-        opacity:0 ;
-        scale:25% ;
-    }
-    to{
-        opacity: 1;
-        scale: 100%;
-    }
+
+
+.img:nth-child(even) {
+    float: right;
+    margin-right: 30px;
+    margin-top: 300px;
 }
 
 
