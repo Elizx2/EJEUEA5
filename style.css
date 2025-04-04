@@ -1,12 +1,14 @@
 body{background-color: rgb(241, 185, 120);
     height: 2000px;
-    background-image: url(/assets/fondo.png);
+   ;
 }
 
 .T{text-align: center;}
 
 
-
+#b{
+  background-image: url(/assets/fondo.png);
+}
 
 img{
   animation: fadeIn 3s ease;

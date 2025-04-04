@@ -1,5 +1,11 @@
 window.scrollTo(0, document.body.scrollHeight);
 
+
+  window.onload = function() {
+    window.scrollTo(0, 0);
+  };
+
+
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
