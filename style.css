@@ -1,6 +1,6 @@
 body{background-color: rgb(241, 185, 120);
     height: 2000px;
-    background-image: "/assets/fondo.png";
+    background-image: url(/assets/fondo.png);
 }
 
 .T{text-align: center;}
