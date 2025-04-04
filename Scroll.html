@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eje</title>
+    <title>Casos de Violencia Obstétrica</title>
     <link rel="stylesheet" href="style.css">
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@latest/examples/jsm/"
+        }
+      }
+    </script>
+
 </head>
 <body  background="/assets/fondo.png"> 
     
@@ -24,18 +35,18 @@
 
     <img src="/assets/Texto de prueba.png" alt="" class="img">
 
-  <img src="/assets/mapa.jpg" usemap="#image-map" class="img1" >
-
 </div>
    
-    
+<div id="heading">
+    <div class="border"></div>
+  </div>
+  <div id="progress-container">
+    <div id="progress">Engaging Hyperdrive...</div>
+  </div>
 
-<map name="image-map">
-    <area target="" alt="Durango" title="Durango" href="Durango.html" coords="769,606,885,806" shape="rect">
-    <area target="" alt="Chiapas" title="chiapas" href="Chiapas.html"  coords="1675,1214,1740,1308,1654,1312,1617,1398,1504,1305,1528,1236,1541,1211,1602,1214,1606,1195,1654,1188" shape="poly">
-</map>
 
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
+
 
 </body>
 </html>
