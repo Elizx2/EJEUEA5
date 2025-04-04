@@ -155,41 +155,42 @@ modal.appendChild(closeButton);
 document.body.appendChild(modal);
 }
 
-function detectarEstadoPorCoordenadas(point) {
-const tolerance = 0.1;
 
-if (Math.abs(point.x - -0.6113261109256412) < tolerance && Math.abs(point.z - 1.8727663601047255) < tolerance) {
-  return "CDMX"; // Coordenadas aproximadas para CDMX
+function detectarEstadoPorCoordenadas(point) {
+const tolerance = 0.3;
+
+if (Math.abs(point.x - -0.6926023077635488) < tolerance && Math.abs(point.z - 0.8687557168521156) < tolerance) {
+  return "CDMX"; // Coordenadas para CDMX
 }
-if (Math.abs(point.x - -2.2276710094366976) < tolerance && Math.abs(point.z - 1.5734913975729814) < tolerance) {
+if (Math.abs(point.x - -2.6321702995841645) < tolerance && Math.abs(point.z - 0.45387550003285604) < tolerance) {
   console.log("Estado detectado: Jalisco");
   return "Jalisco"; // Coordenadas para Jalisco
 }
-if (Math.abs(point.x - -2.7270868773710486) < tolerance && Math.abs(point.z - 1.2233527600086418) < tolerance) {
+if (Math.abs(point.x - -2.6422296488205923) < tolerance && Math.abs(point.z - 0.8810797866539115) < tolerance) {
   console.log("Estado detectado: Colima");
   return "Colima"; // Coordenadas para Colima
 }
-if (Math.abs(point.x - 1.7990650252956173) < tolerance && Math.abs(point.z - 2.9411072069900324) < tolerance) {
+if (Math.abs(point.x - 1.9353647216149512) < tolerance && Math.abs(point.z - 2.2096030274395604) < tolerance) {
   console.log("Estado detectado: Chiapas");
   return "Chiapas"; 
 }
-if (Math.abs(point.x - 0.36269499197700394) < tolerance && Math.abs(point.z - 2.1269175061859977) < tolerance) {
+if (Math.abs(point.x - 0.28379765038424276) < tolerance && Math.abs(point.z - 0.7626811665431461) < tolerance) {
   console.log("Estado detectado: Veracruz");
   return "Veracruz"; 
 }
-if (Math.abs(point.x - -2.9077804356145918) < tolerance && Math.abs(point.z - -1.0841420040656136) < tolerance) {
+if (Math.abs(point.x - -3.732214351574595) < tolerance && Math.abs(point.z - -3.720167990324372) < tolerance) {
   console.log("Estado detectado: Chihuahua");
   return "Chihuahua"; 
 }
-if (Math.abs(point.x - -0.3426581540528828) < tolerance && Math.abs(point.z - 0.438262170330705) < tolerance) {
+if (Math.abs(point.x - -0.447495911289443) < tolerance && Math.abs(point.z - -1.4212034342906819) < tolerance) {
   console.log("Estado detectado: Tamaulipas");
   return "Tamauliapas"; 
 }
-if (Math.abs(point.x - -3.1960592492526803) < tolerance && Math.abs(point.z - 0.4526612132727017) < tolerance) {
+if (Math.abs(point.x - -4.03752017795801) < tolerance && Math.abs(point.z - -1.7688413537978693) < tolerance) {
   console.log("Estado detectado: Sinaloa");
   return "Sinaloa"; 
 }
-if (Math.abs(point.x - -1.60348763786101) < tolerance && Math.abs(point.z - -0.8618037688191711) < tolerance) {
+if (Math.abs(point.x - -1.933498766022701) < tolerance && Math.abs(point.z - -2.8621781115412297) < tolerance) {
   console.log("Estado detectado: Coahuila");
   return "Coahuila"; 
 }
