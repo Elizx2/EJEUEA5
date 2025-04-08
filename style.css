@@ -141,8 +141,25 @@ button {
   }
   
   /* Estilo del SVG */
-  .heartbeat {
-    background-color: #000;
+  .ecg{
+    width: 100%;
+    opacity: 1;
+    stroke-dasharray: 600;
+    animation: ecg 1.5s linear forwards infinite,
+               fade 1.5s linear infinite;
+  }
+  @keyframes ecg{
+    to {
+      stroke-dashoffset: -1200;
+    }
+  }
+  @keyframes fade{
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
   }
   
   /* Animación de los latidos*/
@@ -153,16 +170,8 @@ button {
   }
   
   
-  /* Definición de la animacion */
-  @keyframes latido {
-    0% {
-      stroke-dashoffset: 1000;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  
+
+ 
   /* Texto */
   .text-overlay {
     position: absolute;
