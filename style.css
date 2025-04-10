@@ -40,7 +40,7 @@ body{background-color: rgb(241, 185, 120);
 }
     
 .img {
-    background-color: #ff0000;
+    background-image: linear-gradient( to right , rgb(153, 4, 4) , #b44c4c, rgb(248, 79, 79));
     position: relative;
     width: 620px;
     padding-left: 15px;
@@ -49,9 +49,9 @@ body{background-color: rgb(241, 185, 120);
     font-family: 'Times New Roman';
     font-size: 30px;
     word-wrap: break-word;
-    border: 2px solid black;
     line-height: 1.5;
     margin-bottom: 250px;
+    border-radius: 20px;
 }
 
 
@@ -185,12 +185,13 @@ text-decoration: none;
   }
 
   #T2{  font-size: 60px;
-    color: #141313;
+    color: #791a1a;
     text-align: center;
      }
 
   #T3{
     margin-top: 4100px;
     font-size: 30px;
-    color: aliceblue;
+    color: rgb(195, 161, 164);
   }
+

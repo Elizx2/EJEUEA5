@@ -10,4 +10,4 @@ Elsaluz Adrade Rivera
 Emili Zepeda Rosas  
 
 ## Statement
-Nuestra obra es una página web interactiva que abarca el tema de violencia obstétrica.En esta haremos una representación artística a través de ilustraciones y videos narrando los casos.
+Nuestra obra es una página web interactiva que abarca el tema de violencia obstétrica.   En esta haremos una representación artística a través de ilustraciones y videos narrando los casos.
