@@ -14,11 +14,6 @@ body{background-color: rgb(241, 185, 120);
   background-image: url(/assets/fondo.png);
 }
 
-.img{
-  animation: fadeIn 3s ease;
-
-}
-
 @keyframes fadeIn{
   0% { 
     opacity: 0;
@@ -41,19 +36,18 @@ body{background-color: rgb(241, 185, 120);
     
 .img {
     /*background-image: linear-gradient( to top , rgb(158, 0, 0) , #ce3b3b, rgb(250, 118, 118));*/
-    position: relative;
-    width: 620px;
-    padding-left: 15px;
-    padding-right: 15px;
-    clear: both; 
-    font-family: 'Times New Roman';
-    font-size: 30px;
-    text-align: justify;
-    line-height: 1.5;
-    margin-bottom: 250px;
-    border-radius: 20px;
-}
-
+      position: relative;
+      width: 620px;
+      padding-left: 15px;
+      padding-right: 15px;
+      clear: both; 
+      font-family: 'Times New Roman';
+      font-size: 30px;
+      text-align: justify;
+      line-height: 1.5;
+      margin-bottom: 250px;
+      border-radius: 15px;
+  }
 
 .img:nth-child(odd) {
     float: left;
@@ -68,6 +62,17 @@ body{background-color: rgb(241, 185, 120);
     margin-top: 300px;
 }
 
+.img {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Clase que se aplicará al hacer scroll */
+.img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 #s{
     display: flex;
@@ -214,4 +219,58 @@ text-decoration: none;
 
 #D5{
   position: absolute;top: 3300px; left: 900px; height: 700px;
+}
+
+/*Para los créditos*/
+
+.contenedor {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 600px;
+  height: 600px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 600px;
+  width: 600px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #10252c;
+}
+
+.contenedor:hover .overlay {
+  opacity: 1;
+}
+
+.texto {
+  color: rgb(248, 233, 233);
+  font-size: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Times New Roman';
+}
+
+#contenedor1{
+  bottom: 600px;left: 1200px ;
+}
+
+#cre{
+  bottom: 90px; left: 1750px;
+  color: rgb(245, 249, 252);
+  position: absolute;
+  font-size: 30px;
 }

@@ -4,10 +4,10 @@ Proyecto del eje integrador de la Unidad V.
 Licenciatura de Arte y Comunicación Digitales, UAM Lerma, Edo. México.  
 
 ## Integrantes 
-Monserrath Jimenez Torres  
-Laura Andrea Londoño Sinisterra  
-Elsaluz Adrade Rivera  
-Emili Zepeda Rosas  
+Monserrath Jimenez Torres: Código y modelado 3D
+Laura Andrea Londoño Sinisterra: Iustración y escritura del documento   
+Elsaluz Adrade Rivera: Código e ilustración
+Emili Zepeda Rosas: Código y escritura del documento   
 
 ## Statement
 Nuestra obra es una página web interactiva que abarca el tema de violencia obstétrica.   En esta haremos una representación artística a través de ilustraciones y videos narrando los casos.

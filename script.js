@@ -196,3 +196,19 @@ if (Math.abs(point.x - -1.933498766022701) < tolerance && Math.abs(point.z - -2.
 }
 return null;
 }
+
+//
+const images = document.querySelectorAll('.img');
+  
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Solo se anima una vez
+    }
+  });
+}, {
+  threshold: 0.2 // Se activa cuando el 20% del elemento es visible
+});
+
+images.forEach(img => observer.observe(img));
