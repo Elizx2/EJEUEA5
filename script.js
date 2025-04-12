@@ -147,9 +147,27 @@ modal.style.background = "white";
 modal.style.border = "1px solid black";
 modal.style.zIndex = "1000";
 
+
+let titulo = document.createElement("h2");
+titulo.textContent = nombre;
+
+let descripcion = document.createElement("p");
+descripcion.textContent = info.texto;
+
+let video = document.createElement("video");
+video.src = info.video;
+video.controls = true;
+video.style.width = "100%";
+video.style.marginTop = "10px";
+
 let closeButton = document.createElement("button");
 closeButton.innerText = "Cerrar";
+closeButton.style.marginTop = "10px";
 closeButton.onclick = () => document.body.removeChild(modal);
+
+modal.appendChild(titulo);
+modal.appendChild(descripcion);
+modal.appendChild(video);
 modal.appendChild(closeButton);
 
 document.body.appendChild(modal);
@@ -161,6 +179,8 @@ const tolerance = 0.3;
 
 if (Math.abs(point.x - -0.6926023077635488) < tolerance && Math.abs(point.z - 0.8687557168521156) < tolerance) {
   return "CDMX"; // Coordenadas para CDMX
+  
+
 }
 if (Math.abs(point.x - -2.6321702995841645) < tolerance && Math.abs(point.z - 0.45387550003285604) < tolerance) {
   console.log("Estado detectado: Jalisco");

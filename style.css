@@ -42,8 +42,8 @@ body{background-color: rgb(241, 185, 120);
       padding-right: 15px;
       clear: both; 
       font-family: 'Times New Roman';
-      font-size: 30px;
-      text-align: justify;
+      font-size: 50px;
+      word-break: normal;
       line-height: 1.5;
       margin-bottom: 250px;
       border-radius: 15px;
@@ -189,36 +189,36 @@ text-decoration: none;
     text-shadow: 0 0 15px #ff0000;
   }
 
-  #T2{  font-size: 60px;
-    color: #791a1a;
+  #T2{  font-size: 70px;
+    color: #8b0000;
     text-align: center;
      }
 
   #T3{
-    margin-top: 4100px;
+    margin-top: 5000px;
     font-size: 30px;
-    color: rgb(218, 191, 193);
+    color: #F5F5DC;
   }
 
 /* Para los dibujos*/
 #D1{
-  position: absolute; top: 80px; left: 1000px; height:600px; animation: fadeIn 3s ease;
+  position: absolute; top: 120px; left: 1000px; height:600px; 
 }  
 
 #D2{
-  position: absolute; top: 800px; right: 1150px; height: 600px;animation: fadeIn 3s ease;
+  position: absolute; top: 1100px; right: 1150px; height: 600px;
 }
 
 #D3{
-  position: absolute;top: 1700px; left: 1000px; height: 600px;animation: fadeIn 3s ease;
+  position: absolute;top: 2100px; left: 1000px; height: 600px;
 }
 
 #D4{
-  position: absolute; top: 2500px; right:1150px ; height: 600px;
+  position: absolute; top: 3000px; right:1150px ; height: 600px;
 }
 
 #D5{
-  position: absolute;top: 3300px; left: 900px; height: 700px;
+  position: absolute;top: 4100px; left: 900px; height: 700px;
 }
 
 /*Para los créditos*/
