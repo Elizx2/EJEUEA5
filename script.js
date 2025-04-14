@@ -114,7 +114,7 @@ const estadosInfo = {
   },
   "Colima": {
     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "assets/WhatsApp Video 2025-04-11 at 10.36.02 AM.mp4"
+    video: "assets/Caso_6.mp4"
   }
 };
 
@@ -215,7 +215,6 @@ const tolerance = 0.3;
 if (Math.abs(point.x - -0.6926023077635488) < tolerance && Math.abs(point.z - 0.8687557168521156) < tolerance) {
   return "CDMX"; // Coordenadas para CDMX
   
-
 }
 if (Math.abs(point.x - -2.6321702995841645) < tolerance && Math.abs(point.z - 0.45387550003285604) < tolerance) {
   console.log("Estado detectado: Jalisco");
