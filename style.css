@@ -11,7 +11,7 @@ body{background-color: rgb(241, 185, 120);
 
 
 #fondo{
-  background-image: url(/assets/fondo.png);
+  background-image: url(/assets/FondoD.png);
 }
 
 @keyframes fadeIn{

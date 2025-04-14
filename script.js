@@ -54,7 +54,7 @@ scene.add(ambientLight);
 
 //aquí se insertó el modelo
 const loader = new GLTFLoader();
-loader.load('mapa_mexico.glb', (gltf) => {
+loader.load('assets/mapa_mexico.fixed.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
@@ -103,10 +103,19 @@ const mouse = new THREE.Vector2();
 
 
 //aquí se coloca la información de cada estado 
-const estadosInfo ={
- "CDMX":"CNDH....al IMSS por caso de violencia obstétrica.",
- "Jalisco":"CNDH....al IMSS por caso de violencia obstétrica.",
- "Colima":"CNDH....al IMSS por caso de violencia obstétrica."
+const estadosInfo = {
+  "CDMX": {
+    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+    video: "videos/cdmx.mp4"
+  },
+  "Jalisco": {
+    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+    video: "videos/jalisco.mp4"
+  },
+  "Colima": {
+    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+    video: "assets/WhatsApp Video 2025-04-11 at 10.36.02 AM.mp4"
+  }
 };
 
 document.addEventListener('mousedown', onMouseDown);
@@ -136,41 +145,67 @@ if (intersections.length > 0) {
 }
 
 function mostrarInfoEstado(nombre, info) {
-let modal = document.createElement("div");
-modal.innerHTML = `<h2>${nombre}</h2><p>${info}</p>`;
-modal.style.position = "fixed";
-modal.style.top = "50%";
-modal.style.left = "50%";
-modal.style.transform = "translate(-50%, -50%)";
-modal.style.padding = "20px";
-modal.style.background = "white";
-modal.style.border = "1px solid black";
-modal.style.zIndex = "1000";
+  // Overlay de fondo oscuro
+  let overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = "100%";
+  overlay.style.height = "100%";
+  overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  overlay.style.zIndex = "999";
 
+  // Modal
+  let modal = document.createElement("div");
+  modal.style.position = "fixed";
+  modal.style.top = "50%";
+  modal.style.left = "50%";
+  modal.style.transform = "translate(-50%, -50%)";
+  modal.style.padding = "20px";
+  modal.style.background = "white";
+  modal.style.border = "1px solid black";
+  modal.style.zIndex = "1000";
+  modal.style.maxWidth = "600px";
+  modal.style.boxShadow = "0 4px 12px rgba(0,0,0,0.3)";
+  modal.style.textAlign = "center";
 
-let titulo = document.createElement("h2");
-titulo.textContent = nombre;
+  let titulo = document.createElement("h2");
+  titulo.textContent = nombre;
 
-let descripcion = document.createElement("p");
-descripcion.textContent = info.texto;
+  let descripcion = document.createElement("p");
+  descripcion.textContent = info.texto;
 
-let video = document.createElement("video");
-video.src = info.video;
-video.controls = true;
-video.style.width = "100%";
-video.style.marginTop = "10px";
+  let video = document.createElement("video");
+  video.src = info.video;
+  video.controls = true;
+  video.autoplay = true;
+  video.style.width = "100%";
+  video.style.marginTop = "10px";
 
-let closeButton = document.createElement("button");
-closeButton.innerText = "Cerrar";
-closeButton.style.marginTop = "10px";
-closeButton.onclick = () => document.body.removeChild(modal);
+  let closeButton = document.createElement("button");
+  closeButton.innerText = "Cerrar";
+  closeButton.style.marginTop = "10px";
 
-modal.appendChild(titulo);
-modal.appendChild(descripcion);
-modal.appendChild(video);
-modal.appendChild(closeButton);
+  closeButton.onclick = () => {
+    video.pause(); // Detiene el video
+    document.body.removeChild(modal);
+    document.body.removeChild(overlay);
+  };
 
-document.body.appendChild(modal);
+  // Cerrar modal si se hace clic fuera de él
+  closeButton.onclick = () => {
+    video.pause();
+    document.body.removeChild(modal);
+    document.body.removeChild(overlay);
+  };
+
+  modal.appendChild(titulo);
+  modal.appendChild(descripcion);
+  modal.appendChild(video);
+  modal.appendChild(closeButton);
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(modal);
 }
 
 
