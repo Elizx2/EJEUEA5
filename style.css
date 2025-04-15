@@ -40,7 +40,8 @@ body{background-color: rgb(241, 185, 120);
 }
     
 .img {
-    /*background-image: linear-gradient( to top , rgb(158, 0, 0) , #ce3b3b, rgb(250, 118, 118));*/
+      background-color: rgb(139, 0, 0);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
       width: 620px;
       padding-left: 15px;
