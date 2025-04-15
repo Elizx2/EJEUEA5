@@ -14,6 +14,11 @@ body{background-color: rgb(241, 185, 120);
   background-image: url(/assets/FondoF.jpg);
 }
 
+#Creditos{
+  background-image: url(/assets/FondoF.jpg);
+  height: 800px;
+}
+
 @keyframes fadeIn{
   0% { 
     opacity: 0;
@@ -223,15 +228,25 @@ text-decoration: none;
 
 /*Para los créditos*/
 
-.contenedor {
-  position: relative;
-  width: 50%;
+.galeria {
+  display: flex;
+  flex-wrap: wrap; /* Para que bajen si no caben */
+  gap: 20px;        /* Espacio entre las cajas */
+  justify-content: center; /* Centra el contenido */
 }
 
-.image {
+.contenedor {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+}
+
+.ava {
   display: block;
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
@@ -240,8 +255,8 @@ text-decoration: none;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 600px;
-  width: 600px;
+  height: 100%;
+  width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #10252c;
@@ -253,16 +268,16 @@ text-decoration: none;
 
 .texto {
   color: rgb(248, 233, 233);
-  font-size: 35px;
+  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   font-family: 'Times New Roman';
+  padding: 10px;
 }
+
 
 #contenedor1{
   bottom: 600px;left: 1200px ;

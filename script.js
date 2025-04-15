@@ -104,18 +104,32 @@ const mouse = new THREE.Vector2();
 
 //aquí se coloca la información de cada estado 
 const estadosInfo = {
-  "CDMX": {
+ "Chiapas" : {
+  texto: "Chiapas",
+  video: "assets/videos/Caso_1.mp4"
+},
+  "Tamauliapas": {
     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "videos/cdmx.mp4"
-  },
-  "Jalisco": {
-    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "videos/jalisco.mp4"
+    video: "assets/videos/Caso_4.mp4"
   },
   "Colima": {
     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "assets/Caso_6.mp4"
-  }
+    video: "assets/videos/Caso_6.mp4"
+  },
+  "Coahuila" : {
+    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+    video: "assets/videos/Caso_8.mp4"
+  },
+  "Chihuahua" : {
+    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+    video: "assets/videos/Caso_9.mp4"
+  },
+  "CDMX" : {
+    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+    video: "assets/videos/Caso_11.mp4"
+  },
+
+
 };
 
 document.addEventListener('mousedown', onMouseDown);
@@ -236,7 +250,7 @@ if (Math.abs(point.x - -3.732214351574595) < tolerance && Math.abs(point.z - -3.
   console.log("Estado detectado: Chihuahua");
   return "Chihuahua"; 
 }
-if (Math.abs(point.x - -0.447495911289443) < tolerance && Math.abs(point.z - -1.4212034342906819) < tolerance) {
+if (Math.abs(point.x - -0.5518532035450368) < tolerance && Math.abs(point.z - -1.1934412111164816) < tolerance) {
   console.log("Estado detectado: Tamaulipas");
   return "Tamauliapas"; 
 }
