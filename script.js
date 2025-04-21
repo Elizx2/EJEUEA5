@@ -112,18 +112,22 @@ const estadosInfo = {
    texto: "C",
    video: "assets/videos/Caso_2.mp4"
  },
- "Veracruz" : {
+ "Chihuhua1" : {
    texto: "C",
    video: "assets/videos/Caso_3.mp4"
  },
-   "Tamauliapas": {
+   "Tamauliapas|": {
      texto: "CNDH....al IMSS por caso de violencia obstétrica.",
      video: "assets/videos/Caso_4.mp4"
    },
-"Tamauliapas": {
+"Tamauliapas2": {
      texto: "CNDH....al IMSS por caso de violencia obstétrica.",
      video: "assets/videos/Caso_5.mp4"
    },
+"Tamaulipas3" : {
+    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+    video: "assets/videos/Caso_10.mp4"
+  },
 
    "Colima": {
      texto: "CNDH....al IMSS por caso de violencia obstétrica.",
@@ -134,19 +138,20 @@ const estadosInfo = {
    video: "assets/videos/Caso_7.mp4"
  },
 
-   "Coahuila" : {
+   "Coahuila1" : {
      texto: "CNDH....al IMSS por caso de violencia obstétrica.",
      video: "assets/videos/Caso_8.mp4"
    },
-   "Chihuahua" : {
+   "Chihuahua2" : {
      texto: "CNDH....al IMSS por caso de violencia obstétrica.",
      video: "assets/videos/Caso_9.mp4"
    },
+   
    "CDMX" : {
      texto: "CNDH....al IMSS por caso de violencia obstétrica.",
      video: "assets/videos/Caso_11.mp4"
    },
- "Coahuila": {
+ "Coahuila2": {
      texto: "CNDH....al IMSS por caso de violencia obstétrica.",
      video: "assets/videos/Caso_12.mp4"
    }
@@ -264,42 +269,63 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.6926023077635488) < tolerance && Math.abs(point.z - 0.8687557168521156) < tolerance) {
+if (Math.abs(point.x - -0.7009258038610238) < tolerance && Math.abs(point.z - 1.4240945549538493) < tolerance) {
   return "CDMX"; // Coordenadas para CDMX
-  
+}
 
-}
-if (Math.abs(point.x - -2.6321702995841645) < tolerance && Math.abs(point.z - 0.45387550003285604) < tolerance) {
-  console.log("Estado detectado: Jalisco");
-  return "Jalisco"; // Coordenadas para Jalisco
-}
-if (Math.abs(point.x - -2.6422296488205923) < tolerance && Math.abs(point.z - 0.8810797866539115) < tolerance) {
+if (Math.abs(point.x - -2.5781790893159093) < tolerance && Math.abs(point.z - 1.298471124951381) < tolerance) {
   console.log("Estado detectado: Colima");
   return "Colima"; // Coordenadas para Colima
 }
-if (Math.abs(point.x - 1.9353647216149512) < tolerance && Math.abs(point.z - 2.2096030274395604) < tolerance) {
+
+if (Math.abs(point.x - 1.8942448347094696) < tolerance && Math.abs(point.z - 2.64827199753406) < tolerance) {
   console.log("Estado detectado: Chiapas");
   return "Chiapas"; 
 }
-if (Math.abs(point.x - 0.28379765038424276) < tolerance && Math.abs(point.z - 0.7626811665431461) < tolerance) {
+
+if (Math.abs(point.x - 0.33888635611213314) < tolerance && Math.abs(point.z - 1.4341463623126964) < tolerance) {
   console.log("Estado detectado: Veracruz");
   return "Veracruz"; 
 }
-if (Math.abs(point.x - -3.732214351574595) < tolerance && Math.abs(point.z - -3.720167990324372) < tolerance) {
-  console.log("Estado detectado: Chihuahua");
-  return "Chihuahua"; 
+
+if (Math.abs(point.x - -4.342694873943024) < tolerance && Math.abs(point.z - -3.719279246917718) < tolerance) {
+  console.log("Estado detectado: Chihuahua_2");
+  return "Chihuahua2"; 
 }
-if (Math.abs(point.x - -0.447495911289443) < tolerance && Math.abs(point.z - -1.4212034342906819) < tolerance) {
+
+if (Math.abs(point.x - -3.2579271766417266) < tolerance && Math.abs(point.z - -2.6977202232169457) < tolerance) {
+  console.log("Estado detectado: Chihuahua 1");
+  return "Chihuahua1"; 
+}
+
+if (Math.abs(point.x -  -0.22765651022056904) < tolerance && Math.abs(point.z - -0.4691419593569196) < tolerance) {
   console.log("Estado detectado: Tamaulipas");
   return "Tamauliapas"; 
 }
-if (Math.abs(point.x - -4.03752017795801) < tolerance && Math.abs(point.z - -1.7688413537978693) < tolerance) {
+
+if (Math.abs(point.x - -0.8254246493799218) < tolerance && Math.abs(point.z - -0.8068218964867508) < tolerance) {
+  console.log("Estado detectado: Tamaulipas2");
+  return "Tamauliapas2"; 
+}
+
+if (Math.abs(point.x - -0.37391378287684485) < tolerance && Math.abs(point.z - -1.811843538621835) < tolerance) {
+  console.log("Estado detectado: Tamaulipas3");
+  return "Tamauliapas3"; 
+}
+
+if (Math.abs(point.x - -3.7892863398474055) < tolerance && Math.abs(point.z - -1.1802714704492945) < tolerance) {
   console.log("Estado detectado: Sinaloa");
   return "Sinaloa"; 
 }
+
+if (Math.abs(point.x - -1.5403530538098897) < tolerance && Math.abs(point.z - -1.8037631799688345 ) < tolerance) {
+  console.log("Estado detectado: Coahuila");
+  return "Coahuila1"; 
+}
+
 if (Math.abs(point.x - -1.933498766022701) < tolerance && Math.abs(point.z - -2.8621781115412297) < tolerance) {
   console.log("Estado detectado: Coahuila");
-  return "Coahuila"; 
+  return "Coahuila2"; 
 }
 return null;
 }
