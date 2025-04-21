@@ -54,7 +54,7 @@ scene.add(ambientLight);
 
 //aquí se insertó el modelo
 const loader = new GLTFLoader();
-loader.load('assets/mapa_mexico.fixed.glb', (gltf) => {
+loader.load('assets/Mapa_Pines_F.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
@@ -104,33 +104,54 @@ const mouse = new THREE.Vector2();
 
 //aquí se coloca la información de cada estado 
 const estadosInfo = {
- "Chiapas" : {
-  texto: "Chiapas",
-  video: "assets/videos/Caso_1.mp4"
-},
-  "Tamauliapas": {
-    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "assets/videos/Caso_4.mp4"
-  },
-  "Colima": {
-    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "assets/videos/Caso_6.mp4"
-  },
-  "Coahuila" : {
-    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "assets/videos/Caso_8.mp4"
-  },
-  "Chihuahua" : {
-    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "assets/videos/Caso_9.mp4"
-  },
-  "CDMX" : {
-    texto: "CNDH....al IMSS por caso de violencia obstétrica.",
-    video: "assets/videos/Caso_11.mp4"
-  },
+  "Chiapas" : {
+   texto: "Chiapas",
+   video: "assets/videos/Caso_1.mp4"
+ },
+ "Veracruz" : {
+   texto: "C",
+   video: "assets/videos/Caso_2.mp4"
+ },
+ "Veracruz" : {
+   texto: "C",
+   video: "assets/videos/Caso_3.mp4"
+ },
+   "Tamauliapas": {
+     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+     video: "assets/videos/Caso_4.mp4"
+   },
+"Tamauliapas": {
+     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+     video: "assets/videos/Caso_5.mp4"
+   },
 
+   "Colima": {
+     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+     video: "assets/videos/Caso_6.mp4"
+   },
+"Sinaloa" : {
+   texto: "Chiapas",
+   video: "assets/videos/Caso_7.mp4"
+ },
 
-};
+   "Coahuila" : {
+     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+     video: "assets/videos/Caso_8.mp4"
+   },
+   "Chihuahua" : {
+     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+     video: "assets/videos/Caso_9.mp4"
+   },
+   "CDMX" : {
+     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+     video: "assets/videos/Caso_11.mp4"
+   },
+ "Coahuila": {
+     texto: "CNDH....al IMSS por caso de violencia obstétrica.",
+     video: "assets/videos/Caso_12.mp4"
+   }
+ 
+ };
 
 document.addEventListener('mousedown', onMouseDown);
 
@@ -177,42 +198,58 @@ function mostrarInfoEstado(nombre, info) {
   modal.style.transform = "translate(-50%, -50%)";
   modal.style.padding = "20px";
   modal.style.background = "white";
-  modal.style.border = "1px solid black";
   modal.style.zIndex = "1000";
   modal.style.maxWidth = "600px";
-  modal.style.boxShadow = "0 4px 12px rgba(0,0,0,0.3)";
+  modal.style.boxShadow = "0 10px 25px rgba(0,0,0,0.3)";
   modal.style.textAlign = "center";
+  modal.style.borderRadius = "16px"; // Bordes redondeados
+  modal.style.transition = "opacity 0.3s ease-in-out";
+  modal.style.opacity = "0"; // Inicialmente invisible
 
+  // Mostrar con efecto de aparición
+  setTimeout(() => {
+    modal.style.opacity = "1";
+  }, 10);
+
+  // Título
   let titulo = document.createElement("h2");
   titulo.textContent = nombre;
 
+  // Descripción
   let descripcion = document.createElement("p");
   descripcion.textContent = info.texto;
 
+  // Video
   let video = document.createElement("video");
   video.src = info.video;
   video.controls = true;
   video.autoplay = true;
   video.style.width = "100%";
   video.style.marginTop = "10px";
+  video.style.borderRadius = "12px"; // Bordes redondeados del video
 
+  // Botón de cerrar
   let closeButton = document.createElement("button");
   closeButton.innerText = "Cerrar";
   closeButton.style.marginTop = "10px";
+  closeButton.style.padding = "10px 20px";
+  closeButton.style.border = "none";
+  closeButton.style.borderRadius = "8px";
+  closeButton.style.backgroundColor = "#333";
+  closeButton.style.color = "white";
+  closeButton.style.cursor = "pointer";
 
-  closeButton.onclick = () => {
-    video.pause(); // Detiene el video
-    document.body.removeChild(modal);
-    document.body.removeChild(overlay);
-  };
-
-  // Cerrar modal si se hace clic fuera de él
+  // Evento cerrar
   closeButton.onclick = () => {
     video.pause();
-    document.body.removeChild(modal);
-    document.body.removeChild(overlay);
+    modal.style.opacity = "0";
+    setTimeout(() => {
+      document.body.removeChild(modal);
+      document.body.removeChild(overlay);
+    }, 300); // Coincide con la duración de la transición
   };
 
+  // Agregar elementos
   modal.appendChild(titulo);
   modal.appendChild(descripcion);
   modal.appendChild(video);
@@ -223,12 +260,14 @@ function mostrarInfoEstado(nombre, info) {
 }
 
 
+
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
 if (Math.abs(point.x - -0.6926023077635488) < tolerance && Math.abs(point.z - 0.8687557168521156) < tolerance) {
   return "CDMX"; // Coordenadas para CDMX
   
+
 }
 if (Math.abs(point.x - -2.6321702995841645) < tolerance && Math.abs(point.z - 0.45387550003285604) < tolerance) {
   console.log("Estado detectado: Jalisco");
@@ -250,7 +289,7 @@ if (Math.abs(point.x - -3.732214351574595) < tolerance && Math.abs(point.z - -3.
   console.log("Estado detectado: Chihuahua");
   return "Chihuahua"; 
 }
-if (Math.abs(point.x - -0.5518532035450368) < tolerance && Math.abs(point.z - -1.1934412111164816) < tolerance) {
+if (Math.abs(point.x - -0.447495911289443) < tolerance && Math.abs(point.z - -1.4212034342906819) < tolerance) {
   console.log("Estado detectado: Tamaulipas");
   return "Tamauliapas"; 
 }
@@ -280,3 +319,5 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 images.forEach(img => observer.observe(img));
+
+
