@@ -11,11 +11,11 @@ body{background-color: rgb(241, 185, 120);
 
 
 #fondo{
-  background-image: url(/assets/FondoF.jpg);
+  background-image: url(/assets/fondos.png);
 }
 
 #Creditos{
-  background-image: url(/assets/FondoF.jpg);
+  background-image: url(/assets/fondos.png);
   height: 800px;
 }
 
@@ -53,8 +53,7 @@ body{background-color: rgb(241, 185, 120);
       line-height: 1.5;
       margin-bottom: 250px;
       border-radius: 15px;
-    
-     
+
   }
 
 .img:nth-child(odd) {
@@ -198,14 +197,14 @@ text-decoration: none;
   }
 
   #T2{  font-size: 70px;
-    color: #8b0000;
+    color: #F5F5DC;
     text-align: center;
      }
 
   #T3{
     margin-top: 5000px;
     font-size: 30px;
-    color: #F5F5DC;
+    color: #260000;
   }
 
 /* Para los dibujos*/

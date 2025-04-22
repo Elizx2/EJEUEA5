@@ -16,7 +16,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 //tamaño y color de la ventana
 
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x49100a);
+renderer.setClearColor(0x00491000, 0.01);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 renderer.shadowMap.enabled = true;
