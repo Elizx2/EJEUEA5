@@ -1,5 +1,6 @@
 body{background-color: rgb(241, 185, 120);
     height: 2000px;
+    background-image: url(assets/fondos.png)
    ;
 }
 
@@ -10,12 +11,9 @@ body{background-color: rgb(241, 185, 120);
 .T{text-align: center;}
 
 
-#fondo{
-  background-image: url(/assets/fondos.png);
-}
 
 #Creditos{
-  background-image: url(/assets/fondos.png);
+  background-image: url(assets/fondos.png);
   height: 800px;
 }
 
