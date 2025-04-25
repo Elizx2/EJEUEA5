@@ -54,7 +54,7 @@ scene.add(ambientLight);
 
 //aquí se insertó el modelo
 const loader = new GLTFLoader();
-loader.load('assets/Mapa_int.glb', (gltf) => {
+loader.load('assets/Mapacolor.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
@@ -271,7 +271,7 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.6834896090700902) < tolerance && Math.abs(point.z - 1.4443128213473768) < tolerance) {
+if (Math.abs(point.x -  -0.7551162270864973) < tolerance && Math.abs(point.z - 0.5587330371286257) < tolerance) {
   return "CDMX"; // Coordenadas para CDMX
 }
 
@@ -306,12 +306,12 @@ if (Math.abs(point.x -  -0.19784821088422455) < tolerance && Math.abs(point.z - 
   return "Tamauliapas"; 
 }
 
-if (Math.abs(point.x - -0.8254246493799218) < tolerance && Math.abs(point.z - -0.8068218964867508) < tolerance) {
+if (Math.abs(point.x - -0.7857313542936664) < tolerance && Math.abs(point.z - -2.455557021329403 ) < tolerance) {
   console.log("Estado detectado: Tamaulipas2");
   return "Tamauliapas2"; 
 }
 
-if (Math.abs(point.x - -0.7745466795391627) < tolerance && Math.abs(point.z - -2.048933085746608) < tolerance) {
+if (Math.abs(point.x -  -0.8814592043972755) < tolerance && Math.abs(point.z - -1.3887767965173037 ) < tolerance) {
   console.log("Estado detectado: Caso10");
   return "Caso10"; 
 }
@@ -321,7 +321,7 @@ if (Math.abs(point.x - -3.7892863398474055) < tolerance && Math.abs(point.z - -1
   return "Sinaloa"; 
 }
 
-if (Math.abs(point.x - -1.5403530538098897) < tolerance && Math.abs(point.z - -1.8037631799688345 ) < tolerance) {
+if (Math.abs(point.x -  -1.484603906746226) < tolerance && Math.abs(point.z - -1.4506283608810335 ) < tolerance) {
   console.log("Estado detectado: Coahuila");
   return "Coahuila1"; 
 }
