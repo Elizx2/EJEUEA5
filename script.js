@@ -271,7 +271,7 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.7260130833829188) < tolerance && Math.abs(point.z - 1.0834466076380478) < tolerance) {
+if (Math.abs(point.x - -0.6834896090700902) < tolerance && Math.abs(point.z - 1.4443128213473768) < tolerance) {
   return "CDMX"; // Coordenadas para CDMX
 }
 
@@ -301,7 +301,7 @@ if (Math.abs(point.x - -3.205053520574376) < tolerance && Math.abs(point.z - -2.
 }
 
 
-if (Math.abs(point.x -  -0.18433472525241545) < tolerance && Math.abs(point.z - -1.5011217635652034) < tolerance) {
+if (Math.abs(point.x -  -0.19784821088422455) < tolerance && Math.abs(point.z - -1.1085093999579732) < tolerance) {
   console.log("Estado detectado: Tamaulipas");
   return "Tamauliapas"; 
 }
@@ -311,7 +311,7 @@ if (Math.abs(point.x - -0.8254246493799218) < tolerance && Math.abs(point.z - -0
   return "Tamauliapas2"; 
 }
 
-if (Math.abs(point.x -  -0.7820451794447836) < tolerance && Math.abs(point.z - -2.3838714191736567) < tolerance) {
+if (Math.abs(point.x - -0.7745466795391627) < tolerance && Math.abs(point.z - -2.048933085746608) < tolerance) {
   console.log("Estado detectado: Caso10");
   return "Caso10"; 
 }

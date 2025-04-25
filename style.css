@@ -1,7 +1,11 @@
-body{background-color: rgb(241, 185, 120);
-    height: 2000px;
-    background-image: url(assets/FondoF.jpg)
-   ;
+body{
+    height: 6500px;
+   
+}
+
+
+#fondo{
+   background-image: url(assets/FondoF.jpg)
 }
 
 .c{
@@ -195,14 +199,18 @@ text-decoration: none;
   }
 
   #T2{  font-size: 70px;
-    color: #F5F5DC;
+    color: #10252c;
     text-align: center;
      }
 
   #T3{
     margin-top: 5000px;
     font-size: 30px;
-    color: #260000;
+    color:#F5F5DC;
+    background-color: rgb(139, 0, 0);
+    width: 1000px;
+    height: 350px;
+    border-radius: 15px;
   }
 
 /* Para los dibujos*/
