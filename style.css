@@ -5,7 +5,7 @@ body{
 
 
 #fondo{
-   background-image: url(assets/FondoF.jpg)
+   background-image: url(assets/FondoT.png)
 }
 
 .c{
@@ -17,7 +17,7 @@ body{
 
 
 #Creditos{
-  background-image: url(assets/fondos.png);
+  background-image: url(assets/FondoT.png);
   height: 800px;
 }
 
@@ -42,7 +42,7 @@ body{
 }
     
 .img {
-      background-color: rgb(139, 0, 0);
+      background-color: rgb(108, 70, 8);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       /*position: relative;*/
       width: 620px;
@@ -94,19 +94,34 @@ body{
 
 
 
-.boton {
+.boton1 {
   position: absolute;
-  bottom: -250px;
+  bottom: -200px;
   text-align: center;
 }
+
+.boton2 {
+  position: absolute;
+  bottom: -350px; left: 1700px;
+  text-align: center;
+}
+
+.boton3 {
+  position: absolute;
+  bottom: -350px; right: 1700px;
+  text-align: center;
+}
+
+
+
 
 button {
     padding: 15px 25px;
     font-size: 25px;
     cursor: pointer;
     border: none;
-    background-color: #ff0000;
-    color: rgb(11, 11, 11);
+    background-color: #5f452a;
+    color: rgb(242, 225, 182);
     border-radius: 5px;
     cursor: pointer;
     font-family: sans-serif;
@@ -114,8 +129,7 @@ button {
 }
 
 .boton button:hover {
-  background-color: #ff0000;
-  box-shadow: 0 0 50px #ff0000, 0 0 25px #ff0000, 0 0 50px #ff0000,0 0 100px #ff0000, 0 0 300px #ff0000;
+  background-color:#5f452a;
 }
 
 a:link {
@@ -125,7 +139,7 @@ text-decoration: none;
 .body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color:  #BB905F;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,12 +208,12 @@ text-decoration: none;
 
  #T1 {
     font-size: 4rem;
-    color: #ff0000;
-    text-shadow: 0 0 15px #ff0000;
+    color: #5f452a;
+   
   }
 
   #T2{  font-size: 70px;
-    color: #10252c;
+    color: #4d3c0c;
     text-align: center;
      }
 
@@ -207,32 +221,39 @@ text-decoration: none;
     margin-top: 5000px;
     font-size: 30px;
     color:#F5F5DC;
-    background-color: rgb(139, 0, 0);
+    background-color: rgb(108, 70, 8);
     width: 1000px;
     height: 350px;
     border-radius: 15px;
   }
 
+  #T4{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  
 /* Para los dibujos*/
-/*#D1{
-  position: absolute; top: 120px; left: 1000px; height:600px; 
+#D1{
+  position: absolute; top: 40px; left: 1200px; width: 600px;
 }  
 
 #D2{
-  position: absolute; top: 1100px; right: 1150px; height: 600px;
+  position: absolute; top: 1100px; right: 1150px; width: 600px;
 }
 
-#D3{
-  position: absolute;top: 2100px; left: 1000px; height: 600px;
+#D3{position: absolute; top: 1900px; left: 1200px; width: 600px
+  
 }
 
-#D4{
-  position: absolute; top: 3000px; right:1150px ; height: 600px;
+#D4{ position: absolute; top: 2800px; right: 1150px; width: 600px;
+  
 }
 
-#D5{
-  position: absolute;top: 4100px; left: 900px; height: 700px;
+#D5{ position: absolute; top: 3800px; left: 1200px; width: 600px
+  
 }
+
 
 /*Para los créditos*/
 
@@ -267,7 +288,7 @@ text-decoration: none;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #10252c;
+  background-color: #000000;
 }
 
 .contenedor:hover .overlay {
@@ -275,7 +296,7 @@ text-decoration: none;
 }
 
 .texto {
-  color: rgb(248, 233, 233);
+  color: rgb(255, 255, 255);
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -293,7 +314,8 @@ text-decoration: none;
 
 #cre{
   bottom: 90px; left: 1750px;
-  color: rgb(245, 249, 252);
+  color: rgb(248, 248, 248);
+  background-color: #4d3c0c;
   position: absolute;
   font-size: 30px;
 }
