@@ -15,7 +15,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 //tamaño y color de la ventana
 
-renderer.setSize(1750, 700);
+renderer.setSize(1750, window.innerHeight);
 renderer.setClearColor(0x00491000, 0.01);
 renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -271,42 +271,42 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.8039043936987822) < tolerance && Math.abs(point.z -  -0.46460726852763745) < tolerance) {
+if (Math.abs(point.x - -0.6113111015158466) < tolerance && Math.abs(point.z -  1.9147756499167565) < tolerance) {
   return "Ciudad de México"; // Coordenadas para CDMX
 }
 
-if (Math.abs(point.x - -3.041259414261113) < tolerance && Math.abs(point.z - -0.5099626147688241  ) < tolerance) {
+if (Math.abs(point.x - -2.456672444575438) < tolerance && Math.abs(point.z - 1.5123558738825373) < tolerance) {
   console.log("Estado detectado: Villa de Álvarez, Colima");
   return "Villa de Álvarez, Colima"; // Coordenadas para Colima
 }
 
-if (Math.abs(point.x -  2.964144719712966) < tolerance && Math.abs(point.z - 1.128274342980296) < tolerance) {
+if (Math.abs(point.x -  2.50273952913086) < tolerance && Math.abs(point.z - 2.526883124413432) < tolerance) {
   console.log("Estado detectado: Ocosingo, Chiapas");
   return "Ocosingo, Chiapas"; 
 }
 
-if (Math.abs(point.x - 0.6697062116845324) < tolerance && Math.abs(point.z - 1.3582407595541253) < tolerance) {
+if (Math.abs(point.x - 0.22267479044574223) < tolerance && Math.abs(point.z - 2.172093895737511) < tolerance) {
   console.log("Estado detectado:Hospital rural, Zongolica, Veracruz.");
   return "Hospital rural, Zongolica, Veracruz"; 
 }
 
-if (Math.abs(point.x - -2.7001512738816964) < tolerance && Math.abs(point.z - 0.04817296338204535) < tolerance) {
+if (Math.abs(point.x - -2.853818301333757) < tolerance && Math.abs(point.z - -0.5906943395044175) < tolerance) {
   console.log("Estado detectado:San Francisco del Oro, Chihuahua");
   return "San Francisco del Oro, Chihuahua"; 
 }
 
-if (Math.abs(point.x - -3.5805830746200726) < tolerance && Math.abs(point.z - -4.08082020226516) < tolerance) {
+if (Math.abs(point.x - -2.9733584008974483) < tolerance && Math.abs(point.z - -1.9950644475950572) < tolerance) {
   console.log("Ciudad Juárez, Chihuahua");
   return "Ciudad Juárez, Chihuahua"; 
 }
 
 
-if (Math.abs(point.x - -0.1941757189842086) < tolerance && Math.abs(point.z - 1.4444257558049776) < tolerance) {
+if (Math.abs(point.x - -0.21595570657239538) < tolerance && Math.abs(point.z - 0.8209242301370896) < tolerance) {
   console.log("Estado detectado:Ciudad Madero, Tamaulipas");
   return "Ciudad Madero, Tamaulipas"; 
 }
 
-if (Math.abs(point.x - -0.7857313542936664) < tolerance && Math.abs(point.z - -2.455557021329403 ) < tolerance) {
+if (Math.abs(point.x - -0.3385763455328523) < tolerance && Math.abs(point.z - -0.3263900410548164 ) < tolerance) {
   console.log("Estado detectado: Reynosa, Tamaulipas");
   return "Reynosa, Tamaulipas"; 
 }
@@ -316,17 +316,17 @@ if (Math.abs(point.x - 0.03863472704214432) < tolerance && Math.abs(point.z - -1
   return "Matamoros, Tamaulipas."; 
 }
 
-if (Math.abs(point.x - 0.24109094542950826) < tolerance && Math.abs(point.z - 1.5393501362664965) < tolerance) {
+if (Math.abs(point.x - 0.5547021420911653) < tolerance && Math.abs(point.z - 2.213087181306106) < tolerance) {
   console.log("Estado detectado: Hospital rural No.12, Zongolica, Veracruz");
   return "Hospital rural No.12, Zongolica, Veracruz"; 
 }
 
-if (Math.abs(point.x -  -1.7551767983785342) < tolerance && Math.abs(point.z - -2.0335167200004047) < tolerance) {
+if (Math.abs(point.x -  -1.9424504815898438) < tolerance && Math.abs(point.z - -0.16767489768071453) < tolerance) {
   console.log("Estado detectado:Hospitales Generales de Zona NO. 6 y 16, Torreón, Coahuila");
   return "Hospitales Generales de Zona NO. 6 y 16, Torreón, Coahuila"; 
 }
 
-if (Math.abs(point.x - -2.244481563060835) < tolerance && Math.abs(point.z - -1.5787312166864003) < tolerance) {
+if (Math.abs(point.x - -1.5064751266324203) < tolerance && Math.abs(point.z - -0.35483722881846447) < tolerance) {
   console.log("Hospital General, Torreón, Coahuila");
   return "Hospital General, Torreón, Coahuila"; 
 }
