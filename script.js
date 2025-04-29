@@ -15,7 +15,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 //tamaño y color de la ventana
 
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(1750, window.innerHeight);
 renderer.setClearColor(0x00491000, 0.01);
 renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -271,7 +271,7 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x -  -0.7819727289972214) < tolerance && Math.abs(point.z -  -0.24371272481576067) < tolerance) {
+if (Math.abs(point.x - -0.8218981406780066) < tolerance && Math.abs(point.z - -0.4209569886814517) < tolerance) {
   return "Ciudad de México"; // Coordenadas para CDMX
 }
 
