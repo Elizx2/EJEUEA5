@@ -15,7 +15,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 //tamaño y color de la ventana
 
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(1750, 700);
 renderer.setClearColor(0x00491000, 0.01);
 renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -153,7 +153,7 @@ const estadosInfo = {
      texto: '<strong>Título: </strong> RECOMENDACIÓN NO. 178/2024. SOBRE EL CASO DE VIOLACIONES A LOS DERECHOS HUMANOS A LA PROTECCIÓN DE LA SALUD MATERNA, A UNA VIDA LIBRE DE VIOLENCIA EN SU MODALIDAD DE VIOLENCIA OBSTÉTRICA Y AL ACCESO A LA INFORMACIÓN EN MATERIA DE SALUD DE QV1; ASÍ COMO AL PROYECTO DE VIDA DE QV1, VI1 Y VI2 EN EL HOSPITAL DE GINECO OBSTETRICIA NO. 4 “LUIS CASTELAZO AYALA”, DE LA UNIDAD MÉDICA DE ALTA ESPECIALIDAD DEL INSTITUTO MEXICANO DEL SEGURO SOCIAL EN LA CIUDAD DE MÉXICO.<br><strong> Estado </strong>: Ciudad de México<br>  <strong>Fecha de emisión:</strong>   17 de julio de 2024<strong> <br>*Basado en documentación de la Comisión Nacional de los Derechos Humanos (CNDH).</strong> <br> Documento de referencia: <br>  <a href="https://www.cndh.org.mx/sites/default/files/documentos/2024-08/REC_2024_178.pdf">https://www.cndh.org.mx/sites/default/files/doc/Recomendaciones/2016/Rec_2016_047.pdf</a>',
      video: "assets/videos/Caso_11.mp4"
    },
-    " Hospital General, Torreón, Coahuila": {
+    "Hospitales Generales de Zona NO. 6 y 16, Torreón, Coahuila": {
      texto: '<strong>Título: </strong> RECOMENDACIÓN No. 241/ 2024. SOBRE EL CASO DE VIOLACIONES A LOS DERECHOS HUMANOS A LA PROTECCIÓN DE LA SALUD, AL TRATO DIGNO, ASÍ COMO UNA VIDA LIBRE DE VIOLENCIA EN SU MODALIDAD OBSTÉTRICA EN AGRAVIO DE V; ASÍ COMO, AL ACCESO A LA INFORMACIÓN EN MATERIA DE SALUD EN AGRAVIO DE QV, VI1 Y VI2, POR PERSONAL MÉDICO EN LOS HOSPITALES GENERALES DE ZONA NÚMERO 6 Y 16 DEL INSTITUTO MEXICANO DEL SEGURO SOCIAL, AMBOS EN COAHUILA.<br><strong> Estado </strong>: Coahuila<br>  <strong>Fecha de emisión:</strong>   31 de octubre de 2024<strong> <br>*Basado en documentación de la Comisión Nacional de los Derechos Humanos (CNDH).</strong> <br> Documento de referencia: <br>  <a href="https://www.cndh.org.mx/sites/default/files/documentos/2024-11/REC_2024_241.pdf">https://www.cndh.org.mx/sites/default/files/doc/Recomendaciones/2016/Rec_2016_047.pdf</a>',
      video: "assets/videos/Caso_12.mp4"
    }
@@ -271,7 +271,7 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.818237832461091) < tolerance && Math.abs(point.z -  -0.389685680719726  ) < tolerance) {
+if (Math.abs(point.x - -0.8039043936987822) < tolerance && Math.abs(point.z -  -0.46460726852763745) < tolerance) {
   return "Ciudad de México"; // Coordenadas para CDMX
 }
 
@@ -290,28 +290,28 @@ if (Math.abs(point.x - 0.6697062116845324) < tolerance && Math.abs(point.z - 1.3
   return "Hospital rural, Zongolica, Veracruz"; 
 }
 
-if (Math.abs(point.x -  -3.3891595084433357) < tolerance && Math.abs(point.z - -2.3107904031675215) < tolerance) {
-  console.log("Estado detectado: San Francisco del Oro, Chihuahua");
+if (Math.abs(point.x - -2.7001512738816964) < tolerance && Math.abs(point.z - 0.04817296338204535) < tolerance) {
+  console.log("Estado detectado:San Francisco del Oro, Chihuahua");
   return "San Francisco del Oro, Chihuahua"; 
 }
 
-if (Math.abs(point.x - -2.0464915040041007) < tolerance && Math.abs(point.z - 1.4895657844397743) < tolerance) {
+if (Math.abs(point.x - -3.5805830746200726) < tolerance && Math.abs(point.z - -4.08082020226516) < tolerance) {
   console.log("Ciudad Juárez, Chihuahua");
   return "Ciudad Juárez, Chihuahua"; 
 }
 
 
-if (Math.abs(point.x - -0.27424782001276193) < tolerance && Math.abs(point.z - -1.887456566978174) < tolerance) {
+if (Math.abs(point.x - -0.1941757189842086) < tolerance && Math.abs(point.z - 1.4444257558049776) < tolerance) {
   console.log("Estado detectado:Ciudad Madero, Tamaulipas");
   return "Ciudad Madero, Tamaulipas"; 
 }
 
 if (Math.abs(point.x - -0.7857313542936664) < tolerance && Math.abs(point.z - -2.455557021329403 ) < tolerance) {
   console.log("Estado detectado: Reynosa, Tamaulipas");
-  return " Reynosa, Tamaulipas"; 
+  return "Reynosa, Tamaulipas"; 
 }
 
-if (Math.abs(point.x -  -0.05457702903959893) < tolerance && Math.abs(point.z - -1.7856534189543727 ) < tolerance) {
+if (Math.abs(point.x - 0.03863472704214432) < tolerance && Math.abs(point.z - -1.6613196450921617) < tolerance) {
   console.log("Estado detectado: Matamoros, Tamaulipas");
   return "Matamoros, Tamaulipas."; 
 }
