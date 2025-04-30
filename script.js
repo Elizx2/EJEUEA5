@@ -275,12 +275,12 @@ if (Math.abs(point.x - -0.6716068248961693) < tolerance && Math.abs(point.z - 1.
   return "Ciudad de México"; // Coordenadas para CDMX
 }
 
-if (Math.abs(point.x - -3.076025165235051) < tolerance && Math.abs(point.z - -0.6716147726824406) < tolerance) {
+if (Math.abs(point.x - -2.5530822663563573) < tolerance && Math.abs(point.z - 1.0313967969431896) < tolerance) {
   console.log("Estado detectado: Villa de Álvarez, Colima");
   return "Villa de Álvarez, Colima"; // Coordenadas para Colima
 }
 
-if (Math.abs(point.x -  2.9593628395345988) < tolerance && Math.abs(point.z - 0.9952973055175987) < tolerance) {
+if (Math.abs(point.x -  2.5175085133664696) < tolerance && Math.abs(point.z - 2.2332812693355155) < tolerance) {
   console.log("Estado detectado: Ocosingo, Chiapas");
   return "Ocosingo, Chiapas"; 
 }
@@ -290,7 +290,7 @@ if (Math.abs(point.x - 0.6697062116845324) < tolerance && Math.abs(point.z - 1.3
   return "Hospital rural, Zongolica, Veracruz"; 
 }
 
-if (Math.abs(point.x - -3.366384752041707) < tolerance && Math.abs(point.z - -1.9576836397126272) < tolerance) {
+if (Math.abs(point.x - -3.38258732463145) < tolerance && Math.abs(point.z - -2.352228870743504) < tolerance) {
   console.log("Estado detectado:San Francisco del Oro, Chihuahua");
   return "San Francisco del Oro, Chihuahua"; 
 }
