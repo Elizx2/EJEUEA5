@@ -15,7 +15,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 //tamaño y color de la ventana
 
-renderer.setSize(1750, window.innerHeight);
+renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x00491000, 0.01);
 renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -271,16 +271,16 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.6792734612213989) < tolerance && Math.abs(point.z - 1.248445321234013) < tolerance) {
+if (Math.abs(point.x - -0.6716068248961693) < tolerance && Math.abs(point.z - 1.3374353508422763) < tolerance) {
   return "Ciudad de México"; // Coordenadas para CDMX
 }
 
-if (Math.abs(point.x - -2.4985860351497378) < tolerance && Math.abs(point.z - 1.2207478379506238) < tolerance) {
+if (Math.abs(point.x - -3.076025165235051) < tolerance && Math.abs(point.z - -0.6716147726824406) < tolerance) {
   console.log("Estado detectado: Villa de Álvarez, Colima");
   return "Villa de Álvarez, Colima"; // Coordenadas para Colima
 }
 
-if (Math.abs(point.x -  2.4986912416704556) < tolerance && Math.abs(point.z - 2.3692555465248413) < tolerance) {
+if (Math.abs(point.x -  2.9593628395345988) < tolerance && Math.abs(point.z - 0.9952973055175987) < tolerance) {
   console.log("Estado detectado: Ocosingo, Chiapas");
   return "Ocosingo, Chiapas"; 
 }
