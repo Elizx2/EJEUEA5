@@ -271,37 +271,37 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.6923991086091772) < tolerance && Math.abs(point.z -  1.1284855864565015) < tolerance) {
+if (Math.abs(point.x - -0.6792734612213989) < tolerance && Math.abs(point.z - 1.248445321234013) < tolerance) {
   return "Ciudad de México"; // Coordenadas para CDMX
 }
 
-if (Math.abs(point.x - -2.5425767352014303) < tolerance && Math.abs(point.z - 1.0737497458886915) < tolerance) {
+if (Math.abs(point.x - -2.4985860351497378) < tolerance && Math.abs(point.z - 1.2207478379506238) < tolerance) {
   console.log("Estado detectado: Villa de Álvarez, Colima");
   return "Villa de Álvarez, Colima"; // Coordenadas para Colima
 }
 
-if (Math.abs(point.x -  2.4986912416704556) < tolerance && Math.abs(point.z - 2.2501384422974553) < tolerance) {
+if (Math.abs(point.x -  2.4986912416704556) < tolerance && Math.abs(point.z - 2.3692555465248413) < tolerance) {
   console.log("Estado detectado: Ocosingo, Chiapas");
   return "Ocosingo, Chiapas"; 
 }
 
-if (Math.abs(point.x - 0.22267479044574223) < tolerance && Math.abs(point.z - 2.172093895737511) < tolerance) {
+if (Math.abs(point.x - 0.6697062116845324) < tolerance && Math.abs(point.z - 1.3582407595541253) < tolerance) {
   console.log("Estado detectado:Hospital rural, Zongolica, Veracruz.");
   return "Hospital rural, Zongolica, Veracruz"; 
 }
 
-if (Math.abs(point.x - -3.366384752041707) < tolerance && Math.abs(point.z - -2.3951857644882573) < tolerance) {
+if (Math.abs(point.x - -3.366384752041707) < tolerance && Math.abs(point.z - -1.9576836397126272) < tolerance) {
   console.log("Estado detectado:San Francisco del Oro, Chihuahua");
   return "San Francisco del Oro, Chihuahua"; 
 }
 
-if (Math.abs(point.x - -2.9733584008974483) < tolerance && Math.abs(point.z - -1.9950644475950572) < tolerance) {
+if (Math.abs(point.x - -3.5805830746200726) < tolerance && Math.abs(point.z - -4.08082020226516) < tolerance) {
   console.log("Ciudad Juárez, Chihuahua");
   return "Ciudad Juárez, Chihuahua"; 
 }
 
 
-if (Math.abs(point.x - -0.24497304274679907) < tolerance && Math.abs(point.z - -0.4131399080736988) < tolerance) {
+if (Math.abs(point.x - -0.24497304274679907) < tolerance && Math.abs(point.z - -0.1766666917000954) < tolerance) {
   console.log("Estado detectado:Ciudad Madero, Tamaulipas");
   return "Ciudad Madero, Tamaulipas"; 
 }
@@ -316,17 +316,17 @@ if (Math.abs(point.x - 0.023225390608934138) < tolerance && Math.abs(point.z - -
   return "Matamoros, Tamaulipas."; 
 }
 
-if (Math.abs(point.x - 0.5547021420911653) < tolerance && Math.abs(point.z - 2.213087181306106) < tolerance) {
+if (Math.abs(point.x - 0.24109094542950826) < tolerance && Math.abs(point.z - 1.5393501362664965) < tolerance) {
   console.log("Estado detectado: Hospital rural No.12, Zongolica, Veracruz");
   return "Hospital rural No.12, Zongolica, Veracruz"; 
 }
 
-if (Math.abs(point.x -  -1.9424504815898438) < tolerance && Math.abs(point.z - -0.16767489768071453) < tolerance) {
+if (Math.abs(point.x -  -1.7551767983785342) < tolerance && Math.abs(point.z - -2.0335167200004047) < tolerance) {
   console.log("Estado detectado:Hospitales Generales de Zona NO. 6 y 16, Torreón, Coahuila");
   return "Hospitales Generales de Zona NO. 6 y 16, Torreón, Coahuila"; 
 }
 
-if (Math.abs(point.x - -1.5064751266324203) < tolerance && Math.abs(point.z - -0.35483722881846447) < tolerance) {
+if (Math.abs(point.x - -2.244481563060835) < tolerance && Math.abs(point.z - -1.5787312166864003) < tolerance) {
   console.log("Hospital General, Torreón, Coahuila");
   return "Hospital General, Torreón, Coahuila"; 
 }
