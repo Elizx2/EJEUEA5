@@ -271,16 +271,16 @@ function mostrarInfoEstado(nombre, info) {
 function detectarEstadoPorCoordenadas(point) {
 const tolerance = 0.3;
 
-if (Math.abs(point.x - -0.6113111015158466) < tolerance && Math.abs(point.z -  1.9147756499167565) < tolerance) {
+if (Math.abs(point.x - -0.6923991086091772) < tolerance && Math.abs(point.z -  1.1284855864565015) < tolerance) {
   return "Ciudad de México"; // Coordenadas para CDMX
 }
 
-if (Math.abs(point.x - -2.456672444575438) < tolerance && Math.abs(point.z - 1.5123558738825373) < tolerance) {
+if (Math.abs(point.x - -2.5425767352014303) < tolerance && Math.abs(point.z - 1.0737497458886915) < tolerance) {
   console.log("Estado detectado: Villa de Álvarez, Colima");
   return "Villa de Álvarez, Colima"; // Coordenadas para Colima
 }
 
-if (Math.abs(point.x -  2.50273952913086) < tolerance && Math.abs(point.z - 2.526883124413432) < tolerance) {
+if (Math.abs(point.x -  2.4986912416704556) < tolerance && Math.abs(point.z - 2.2501384422974553) < tolerance) {
   console.log("Estado detectado: Ocosingo, Chiapas");
   return "Ocosingo, Chiapas"; 
 }
@@ -290,7 +290,7 @@ if (Math.abs(point.x - 0.22267479044574223) < tolerance && Math.abs(point.z - 2.
   return "Hospital rural, Zongolica, Veracruz"; 
 }
 
-if (Math.abs(point.x - -2.853818301333757) < tolerance && Math.abs(point.z - -0.5906943395044175) < tolerance) {
+if (Math.abs(point.x - -3.366384752041707) < tolerance && Math.abs(point.z - -2.3951857644882573) < tolerance) {
   console.log("Estado detectado:San Francisco del Oro, Chihuahua");
   return "San Francisco del Oro, Chihuahua"; 
 }
@@ -301,17 +301,17 @@ if (Math.abs(point.x - -2.9733584008974483) < tolerance && Math.abs(point.z - -1
 }
 
 
-if (Math.abs(point.x - -0.21595570657239538) < tolerance && Math.abs(point.z - 0.8209242301370896) < tolerance) {
+if (Math.abs(point.x - -0.24497304274679907) < tolerance && Math.abs(point.z - -0.4131399080736988) < tolerance) {
   console.log("Estado detectado:Ciudad Madero, Tamaulipas");
   return "Ciudad Madero, Tamaulipas"; 
 }
 
-if (Math.abs(point.x - -0.3385763455328523) < tolerance && Math.abs(point.z - -0.3263900410548164 ) < tolerance) {
+if (Math.abs(point.x - -0.3796660402272054) < tolerance && Math.abs(point.z - -1.9194292031369873) < tolerance) {
   console.log("Estado detectado: Reynosa, Tamaulipas");
   return "Reynosa, Tamaulipas"; 
 }
 
-if (Math.abs(point.x - 0.03863472704214432) < tolerance && Math.abs(point.z - -1.6613196450921617) < tolerance) {
+if (Math.abs(point.x - 0.023225390608934138) < tolerance && Math.abs(point.z - -1.6395691816238127) < tolerance) {
   console.log("Estado detectado: Matamoros, Tamaulipas");
   return "Matamoros, Tamaulipas."; 
 }
